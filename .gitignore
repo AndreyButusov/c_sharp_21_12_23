@@ -6,6 +6,7 @@
 .vscode/*
 bin/
 obj/
+*.sln
 
 # User-specific files
 *.rsuser
