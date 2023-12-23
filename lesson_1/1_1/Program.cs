@@ -6,6 +6,7 @@
 
 Console.Write("Enter a number 1: ");
 int b1 = Convert.ToInt32(Console.ReadLine()!);
+// int b1 = int.Parse(Console.ReadLine()!); {еще один вариант преобразования типа}
 Console.Write("Enter a number 2: ");
 int b2 = Convert.ToInt32(Console.ReadLine()!);
 if (b2 * b2 == b1)
