@@ -6,20 +6,20 @@ int N = int.Parse(Console.ReadLine()!);
 string str1 = "";
 if (N > 0)
 {
-while (N > 0)
-{
-    if (str1 == "")
+    while (N > 0)
     {
-        str1 = N % 10 + str1;
-        N = N / 10;
+        if (str1 == "")
+        {
+            str1 = N % 10 + str1;
+            N = N / 10;
+        }
+        else
+        {
+            str1 = N % 10 + ", " + str1;
+            N = N / 10;
+        }
     }
-    else
-    {
-        str1 = N % 10 + ", " + str1;
-        N = N / 10;
-    }
-}
-Console.Write(str1);
+    Console.Write(str1);
 }
 else
-Console.Write("Введено не натуральное число");
+    Console.Write("Введено не натуральное число");
