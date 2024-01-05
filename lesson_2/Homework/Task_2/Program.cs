@@ -13,10 +13,10 @@ else
     {
         if (X > 0 && Y > 0)
             Console.WriteLine("Точка находится в I четверти");
-        if (X > 0 && Y < 0)
+        if (X < 0 && Y > 0)
             Console.WriteLine("Точка находится в II четверти");
         if (X < 0 && Y < 0)
             Console.WriteLine("Точка находится в III четверти");
-        if (X < 0 && Y > 0)
+        if (X > 0 && Y < 0)
             Console.WriteLine("Точка находится в IV четверти");
     }
