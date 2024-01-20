@@ -1,5 +1,5 @@
-﻿//  Задача 3: Напишите программу, которая перевернёт одномерный массив 
-//  (первый элемент станет последним, второй – предпоследним и т.д.)
+﻿//  Задача 2: Задайте массив заполненный случайными трёхзначными числами. 
+//  Напишите программу, которая покажет количество чётных чисел в массиве.
 
 void Print(int[] arr)
 { 
@@ -15,21 +15,22 @@ void Print(int[] arr)
 int[] MassNums(int size, int from, int to)
 {
     int[] arr = new int[size];
-    
     for (int i = 0; i < size; i++)
         arr[i] = new Random().Next(from, to + 1);
     return arr;
 }
 
-int[] UpsideDown(int[] arr)
+int CountingEvenNumbers(int[] arr)
 {
-    int size = arr.Length;
-    int[] new_arr = new int[size];
-    for (int i = 0; i < size; i++)
+    int count = 0;
+    for (int i = 0; i < arr.Length; i++)
     {
-        new_arr[i] = arr[size - i - 1];
+        if (arr[i] % 2 == 0 && arr[i] != 0)
+        {
+            count++;
+        }
     }
-    return new_arr;
+    return count;
 }
 
 Console.WriteLine("Введите количество элементов массива");
@@ -38,9 +39,15 @@ Console.WriteLine("Введите минимальное значение диа
 int start = int.Parse(Console.ReadLine()!);
 Console.WriteLine("Введите максимальное значение диапазона целых чисел для задания массива");
 int stop = int.Parse(Console.ReadLine()!);
-        
-int[] mass = MassNums(num, start, stop);
-Console.Write("Заданный массив: ");
-Print(mass);
-Console.Write("Перевернутый массив: ");
-Print(UpsideDown(mass));
+if (start < 100 || stop > 999)
+    {
+        Console.WriteLine("Ошибка! В массиве посторонние числа!");
+    }
+    else
+    {      
+        int[] mass = MassNums(num, start, stop);
+        Console.Write("Заданный массив: ");
+        Print(mass);
+        Console.WriteLine($"В заданном массиве {CountingEvenNumbers(mass)} четных чисел");
+    }
+
