@@ -35,19 +35,19 @@ int CountingEvenNumbers(int[] arr)
 
 Console.WriteLine("Введите количество элементов массива");
 int num = int.Parse(Console.ReadLine()!);
-Console.WriteLine("Введите минимальное значение диапазона целых чисел для задания массива");
+Console.WriteLine("Введите минимальное значение диапазона целых трехзначных чисел для задания массива");
 int start = int.Parse(Console.ReadLine()!);
-Console.WriteLine("Введите максимальное значение диапазона целых чисел для задания массива");
+Console.WriteLine("Введите максимальное значение диапазона целых трехзначных чисел для задания массива");
 int stop = int.Parse(Console.ReadLine()!);
 if (start < 100 || stop > 999)
     {
-        Console.WriteLine("Ошибка! В массиве посторонние числа!");
+        Console.WriteLine("Ошибка! В массиве содержатся посторонние числа!");
     }
     else
     {      
         int[] mass = MassNums(num, start, stop);
         Console.Write("Заданный массив: ");
         Print(mass);
-        Console.WriteLine($"В заданном массиве {CountingEvenNumbers(mass)} четных чисел");
+        Console.WriteLine($"В данном массиве {CountingEvenNumbers(mass)} четных чисел");
     }
 
