@@ -32,6 +32,16 @@ int[] UpsideDown(int[] arr)
     return new_arr;
 }
 
+/*
+void RevMas(int[] arr_1)
+{
+    int size = arr_1.Length;
+
+    for (int i = 0; i < size / 2; i++)
+        (arr_1[i], arr_1[size - i - 1]) = (arr_1[size - i - 1], arr_1[i]);
+}
+*/
+
 Console.WriteLine("Введите количество элементов массива");
 int num = int.Parse(Console.ReadLine()!);
 Console.WriteLine("Введите минимальное значение диапазона целых чисел для задания массива");
@@ -42,5 +52,6 @@ int stop = int.Parse(Console.ReadLine()!);
 int[] mass = MassNums(num, start, stop);
 Console.Write("Заданный массив: ");
 Print(mass);
+//Print(RevMas(mass));
 Console.Write("Перевернутый массив: ");
 Print(UpsideDown(mass));
