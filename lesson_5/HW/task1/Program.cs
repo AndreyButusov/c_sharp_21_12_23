@@ -30,12 +30,14 @@ void Print(int[,] arr)
 
 void FindElement(int[,] mass, int numrow, int numcolumn)
 {
-    if (numrow >= mass.GetLength(0) || numcolumn >= mass.GetLength(1))
+    if (numrow - 1 >= mass.GetLength(0))
+        Console.WriteLine("Позиция по рядам выходит за пределы массива");
+    if (numcolumn - 1 >= mass.GetLength(1))
         Console.WriteLine("Позиция по колонкам выходит за пределы массива");
     for (int i = 0; i < mass.GetLength(0); i++)
         {
         for (int j = 0; j < mass.GetLength(1); j++)
-            if (i == numrow && j == numcolumn)
+            if (i == (numrow - 1) && j == (numcolumn - 1))
             Console.WriteLine($"Запрошенный элемент массива имеет значение {mass[i,j]}");
         }
 }
