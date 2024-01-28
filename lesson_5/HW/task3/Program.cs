@@ -41,11 +41,15 @@ int[] SumRows(int[,] array)
 // Получение индекса минимального элемента в одномерном массиве 
 int MinIndex(int[] array)
 {
-    int MinIndex = array[0];
+    int MinSum = array[0];
+    int MinIndex = 0;
     for (int i = 0; i < array.Length; i++)
     {
-        if (array[i] < MinIndex)
-            MinIndex = array[i];
+        if (array[i] < MinSum)
+        {
+            MinSum = array[i];
+            MinIndex = i;
+        }
     }
     return MinIndex;
 }
