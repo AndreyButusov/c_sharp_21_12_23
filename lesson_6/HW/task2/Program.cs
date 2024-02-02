@@ -3,14 +3,14 @@
 
 Console.Clear();
 
-string RandomStr (int VolumeStr)        //Функция создания произвольной строки заданной длины
+string RandomStr(int VolumeStr)        //Функция создания произвольной строки заданной длины
 {
     string abc = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
     string str = "";
     Random rnd = new Random();
-    for (int i= 0; i < VolumeStr; i++)
+    for (int i = 0; i < VolumeStr; i++)
     {
-        str += abc[rnd.Next(0, abc.Length -1)];
+        str += abc[rnd.Next(0, abc.Length - 1)];
     }
     return str;
 }
@@ -21,4 +21,4 @@ Console.Write("Сформированная строка: ");
 string str = RandomStr(VolumeStr);
 Console.WriteLine(str);
 Console.Write("Немного магии: ");
-Console.WriteLine(str.ToLower());
+Console.WriteLine(str.ToUpper());
