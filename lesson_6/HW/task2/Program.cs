@@ -21,4 +21,4 @@ Console.Write("Сформированная строка: ");
 string str = RandomStr(VolumeStr);
 Console.WriteLine(str);
 Console.Write("Немного магии: ");
-Console.WriteLine(str.ToUpper());
+Console.WriteLine(str.ToLower());
